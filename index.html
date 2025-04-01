@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macaco Inteligente - Busca por Bananas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>Macaco Inteligente e as Bananas</h1>
+        <p>Simulação de busca aleatória com tentativa e erro</p>
+      </header>
+
+      <div class="content-area">
+        <div class="left-panel">
+          <div class="grid-container" id="grid-container">
+            <!-- Grid será preenchido pelo JavaScript -->
+          </div>
+
+          <div class="state-display">
+            <div class="state-panel initial-state">
+              <h3>Estado Inicial</h3>
+              <div class="state-content">
+                <img src="assets/img/monkey.png" alt="Macaco" />
+                <p>Macaco no chão</p>
+              </div>
+            </div>
+
+            <div class="state-panel current-state">
+              <h3>Estado Atual</h3>
+              <div class="state-content" id="current-state">
+                <!-- Atualizado pelo JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-panel">
+          <div class="goal-panel">
+            <h2>Objetivo Final</h2>
+            <div class="goal-visualization">
+              <div class="goal-combination">
+                <div class="goal-item">
+                  <img src="assets/img/monkey.png" alt="Macaco" />
+                  <p>Macaco</p>
+                </div>
+                <div class="plus-sign">+</div>
+                <div class="goal-item">
+                  <img src="assets/img/chair.png" alt="Cadeira" />
+                  <p>Cadeira</p>
+                </div>
+                <div class="plus-sign">+</div>
+                <div class="goal-item">
+                  <img src="assets/img/stick.png" alt="Vara" />
+                  <p>Vara</p>
+                </div>
+              </div>
+              <div class="goal-result">
+                <div class="equals-sign">=</div>
+                <div class="goal-item">
+                  <img src="assets/img/bananas.png" alt="Bananas" />
+                  <p>Bananas!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-tracker">
+            <h3>Progresso</h3>
+            <div class="progress-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <p>Encontrar a vara</p>
+                  <div class="status-indicator" id="stick-status"></div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <p>Subir na cadeira</p>
+                  <div class="status-indicator" id="chair-status"></div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <p>Pegar as bananas</p>
+                  <div class="status-indicator" id="bananas-status"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-panel">
+        <div class="action-log">
+          <h3>Registro de Ações</h3>
+          <div id="log"></div>
+        </div>
+
+        <div class="controls">
+          <button id="startBtn">Iniciar Simulação</button>
+          <button id="resetBtn">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
